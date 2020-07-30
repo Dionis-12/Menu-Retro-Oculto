@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="icon" href="image/icon.ico">
+    <title> Menú Retro Oculto </title>
+    <style>
+
+    body {
+      background-image: url(image/ooo.jpeg);
+      background-size: cover;
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: bold;
+      height: 100vh;
+    }
+
+    .container {
+      height: 40px;
+      margin: 0 auto;
+      position: relative;
+      top: 40px;
+      width: 80%;
+    }
+
+    #logo {
+      color: white;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+
+    .navigation-wrapper {
+      position: relative;
+    }
+
+    .navigation-button {
+      align-items: center;
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: fixed;
+      right: 100px;
+      top: 40px;
+      will-change: transform;
+      z-index: 1;
+    }
+
+    .navigation-button .fa {
+      border: 2px solid white;
+      border-radius: 3px;
+      color: white;
+      padding: 10px;
+    }
+
+    .navigation-menu ul li {
+      color: hsl(0,0%,70%);
+      font-family: impact;
+      font-weight: 300;
+      list-style: none;
+    }
+
+    .navigation-menu {
+      background: #fff;
+      content: '';
+      height: 100%;
+      position: fixed;
+      right: 0;
+      transform: skewX(0deg) translate(100%,0);
+      transform-origin: top right;
+      transition: all .2s ease-in;
+      top: 0;
+      width: 50%;
+      z-index: -1;
+    }
+
+    .navigation-menu ul {
+      position: fixed;
+      right: 120px;
+      text-align: right;
+      transform: skewX(-8deg);
+      transform-origin: top left;
+      top: 120px;
+      width: 400px;
+    }
+
+    .navigation-menu ul li {
+      color: hsl(0,0%,10%);
+      font-size: 32px;
+      line-height: 64px;
+      position: relative;
+      z-index: 999;
+    }
+
+    .navigation-menu ul li a {
+      border: none;
+      color: hsl(0,0%,10%);
+      text-decoration: none;
+    }
+
+    .navigation-menu.active {
+      transform: skewX(8deg) translate(0,0);
+    }
+
+    .navigation-menu li {
+      opacity: 0;
+      transform: translate(0, 10px);
+      transition: all .0s ease-in .3s;
+    }
+
+    .navigation-menu.active li {
+      opacity: 1;
+      transform: translate(0,0);
+      transition: all .2s ease-in 0s;
+    }
+
+    .navigation-menu.active li:nth-child(1) {
+      transition-delay: .3s;
+    }
+
+    .navigation-menu.active li:nth-child(2) {
+      transition-delay: .4s;
+    }
+
+    .navigation-menu.active li:nth-child(3) {
+      transition-delay: .5s;
+    }
+
+    .navigation-menu.active li:nth-child(4) {
+      transition-delay: .6s;
+    }
+
+    .navigation-menu.active li:nth-child(5) {
+      transition-delay: .7s;
+    }
+
+    .navigation-menu.active li:nth-child(6) {
+      transition-delay: .8s;
+    }
+
+    .hero h1 {
+      color: white;
+      font-family: impact;
+      font-size: 26px;
+      letter-spacing: 4px;
+      margin-top: 178px;
+      text-transform: uppercase;
+    } 
+
+    span {
+      font-size: 65px;
+      font-family: impact;
+      letter-spacing: 2px;
+    }
+
+    .button {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-weight: normal;
+      font-size: 12px;
+      margin-top: 40px; 
+    }
+
+    .btn1:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn2:hover {
+      color: black;
+      text-decoration: none;
+    }
+        
+    .btn1 {
+      background: #f20c4a;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+    }
+
+    .btn2 {
+      background: #f4f6f8;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      color: #000;
+      padding: 12px 25px;
+      text-decoration: none;
+    }
+
+    </style>
+</head>
+
+<body>
+  <div class="container">
+      <div id="logo"> RETRO </div>
+
+    <div class="navigation-wrapper">
+        <div class="navigation-button">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="navigation-menu">
+            <ul>
+                <li>
+                  <a href=""> HOME </a>
+                </li>
+                <li>
+                  <a href=""> GALLERY </a>
+                </li>
+                <li>
+                  <a href=""> CONTACT </a>
+                </li>
+                <li>
+                  <a href=""> LOCATION </a>
+                </li>
+                <li>
+                  <a href=""> TESTIMONIAL </a>
+                </li>
+                <li>
+                  <a href=""> PRICING </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section class="hero">
+        <h1> Creative Design <br> <span> INTRODUCING </span></h1>
+          <div class="button">
+              <a href="" class="btn1"> Get Started </a>
+              <a href="" class="btn2"> Get Featured </a>
+          </div>
+    </section>
+  </div>
+
+  <script>
+    var navButton = document.querySelector('.navigation-button');
+    var navMenu = document.querySelector('.navigation-menu');
+    var win = window;
+
+    function openMenu(event) {
+      
+    navButton.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    }
+      
+    function closeMenu(event) {
+      if (navButton.classList.contains('active')) {
+          navButton.classList.remove('active');
+          navMenu.classList.remove('active');
+      }
+    }
+    
+    navButton.addEventListener('click', openMenu, false);
+
+    win.addEventListener('click',closeMenu, false);
+      
+  </script>
+ </body>
+</html>
